@@ -1,0 +1,57 @@
+currentlly I am using flutter clean arctecture using features:
+this the sample arctecture:
+assetets:
+        > fonts
+        > icons
+        > images
+lib:
+    > core:
+          > common:
+                  > style:(divider_style.dart ....)
+                  > widget:( buttons, cards, roundcontainer, textfields ...
+          > connection
+          > errors
+          > constants
+          > params
+          > helpers
+    > features:
+              > authentication:
+                              > business:
+                                        > entities:
+                                        > repository:
+                                        > usecase:
+                              > data:
+                                    > datasource:
+                                    > models:
+                                    > repository:
+                              > presentation:
+                                            > pages:
+                                            > providers:
+                                            > widgets:
+              > new_order:
+                        > business:
+                                  > entities:
+                                  > repository:
+                                  > usecase:
+                        > data:
+                              > datasource:
+                              > models:
+                              > repository:
+                        > presentation:
+                                      > pages:
+                                      > providers:
+                                      > widgets:
+              > balance:
+                        > business:
+                                  > entities:
+                                  > repository:
+                                  > usecase:
+                        > data:
+                              > datasource:
+                              > models:
+                              > repository:
+                        > presentation:
+                                      > pages:
+                                      > providers:
+                                      > widgets:
+    main.dart
