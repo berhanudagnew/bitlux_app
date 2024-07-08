@@ -50,6 +50,7 @@ class _BitLuxTextFieldState extends State<BitLuxTextField> {
             color: widget.hintColor,
             fontSize: BitLuxSizes.fontSizeSm,
           ),
+          
           suffixText: widget.textSuffix,
           suffixStyle: GoogleFonts.roboto(
             color: widget.hintColor,

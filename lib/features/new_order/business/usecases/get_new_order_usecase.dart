@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '../entities/add_new_order_entity.dart';
 import '../repository/add_new_order_repository.dart';
 
@@ -6,7 +8,8 @@ class GetNewOrderUsecase {
 
   GetNewOrderUsecase(this.addNewOrderRepository);
 
-  Future<void> execute(AddNewOrderEntity addNewOrderEntity) async {
-    return await addNewOrderRepository.addNewOrder(addNewOrderEntity);
+  Future<void> execute(
+      AddNewOrderEntity addNewOrderEntity, BuildContext context) async {
+    return await addNewOrderRepository.addNewOrder(addNewOrderEntity, context);
   }
 }

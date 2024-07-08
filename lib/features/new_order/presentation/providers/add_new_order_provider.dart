@@ -7,8 +7,25 @@ class AddNewOrderProvider with ChangeNotifier {
 
   AddNewOrderProvider(this.getNewOrderUsecase);
 
-  Future<void> createOrder(AddNewOrderEntity addNewOrderEntity) async {
-    await getNewOrderUsecase.execute(addNewOrderEntity);
+  bool _isLoading = false;
+  bool get isLoading => _isLoading;
+
+  Future<String?> createOrder(
+      AddNewOrderEntity addNewOrderEntity, BuildContext context) async {
+    _setLoading(true);
+    try {
+      await getNewOrderUsecase.execute(addNewOrderEntity, context);
+      notifyListeners();
+      _setLoading(false);
+      return null;
+    } catch (e) {
+      _setLoading(false);
+      return e.toString();
+    }
+  }
+
+  void _setLoading(bool isLoading) {
+    _isLoading = isLoading;
     notifyListeners();
   }
 }
